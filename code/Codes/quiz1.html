@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/JavaScript">
+function showHint(id)
+{
+if (id == 1)
+  { 
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+//xmlhttp.open("GET","quiz1.php?q="id,true);
+xmlhttp.send();
+}
+</script>
+</head>
+
+<body>
+<strong>Product Descrition</strong> 
+<p>&nbsp;</p>
+<form name="form1" id="form1">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>
+    <select name="menu1" onchange="">
+      <option>--Select Product--</n>
+      <option>Product Id</option>
+      <option>Product Description</option>
+      <option>Unit price</option>
+      <option>Product Category</option>
+    </select>
+  </p>
+  <p>&nbsp;    </p>
+</form>
+</body>
+</html>

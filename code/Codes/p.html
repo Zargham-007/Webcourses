@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function showHint(str)
+{
+if (str.length==0)
+  { 
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","p.php?q="+str,true);
+xmlhttp.send();
+}
+function a()
+{
+document.getElementById("tt").innerHTML+="<input type='text'>";
+document.getElementById("tt").innerHTML=showHint(this.value);
+}
+
+</script>
+
+</head>
+
+<body>
+<form  action="">
+<p> F-Name :
+<input type="text" name="text" id="txt1" onkeyup="showHint(this.value)" />
+</p>
+</form>
+<p> <span id="txtHint"></span></p> 
+<span id="tt" ></span>
+<input type="button" onclick="a()" />
+
+</body>
+</html>

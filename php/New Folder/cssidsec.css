@@ -1,0 +1,24 @@
+/* CSS Document */
+ul#nav1
+{
+list-style-type:none;
+float:left;
+
+}
+
+
+
+ul#nav a
+{
+display:block;
+text-decoration:none;
+background:#6633FF;
+color:#CC0033;
+
+}
+
+ul#nav a:hover
+{
+background:#9933CC;
+color:#00FF99;
+}

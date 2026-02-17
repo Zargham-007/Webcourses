@@ -1,0 +1,50 @@
+/* CSS Document */
+ul#nav 
+{
+list-style-type:none;
+
+}
+
+
+
+ul#nav a
+{
+display:block;
+text-decoration:none;
+background:#00CC99;
+color:#CC0033;
+border-bottom:1px solid #FF99FF;
+}
+
+ul#nav a:hover
+{
+background:#9933CC;
+color:#FFCC66;
+}
+
+ul#nav1 
+{
+list-style-type:none;
+
+}
+
+
+
+ul#nav1 a
+{
+display:block;
+float:left;
+padding:20px;
+text-decoration:none;
+background:#00CC99;
+color:#CC0033;
+width:100px;
+border-bottom:1px solid #FF99FF;
+}
+
+ul#nav1 a:hover
+{
+background:#9933CC;
+color:#FFCC66;
+}
+

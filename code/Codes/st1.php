@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function showHint(str)
+{
+if (str.length==0)
+  { 
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","ps.php?q="+str,true);
+xmlhttp.send();
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Products  :  
+  <select  name="prodect-id" onchange="sl(this.value)">
+    <option> select Product</option>
+    <option value="1"> mobile</option>
+    <option value="2"> headphone</option>
+    <option value="3"> laptop </option>
+    <option value="4"> mouse </option>
+  </select>
+</h1> 
+  <div id="txHint"></div>
+</body>
+</html>
